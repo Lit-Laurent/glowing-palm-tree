@@ -1,0 +1,112 @@
+// -*- mode: jsonc -*-
+// TODO: Add C FFI module for further customization with scripting
+// See: https://github.com/Alexays/Waybar/tree/master/resources/custom_modules/cffi_example
+{
+    "height": 30, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "pulseaudio",
+        "clock",
+	"custom/media",
+        "tray",
+        "custom/power"
+    ],
+
+    // Modules configuration
+    "hyprland/workspaces": {
+         //"format": "{name}: {icon}",
+         //"format-icons": {
+         //    "Main": "",
+         //    "Left": "",
+         //    "Right": ""
+	 //}
+     },
+        "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pkill pavucont || pavucontrol-qt"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 24,
+        "spacing": 10,
+	   "icons": {
+         }
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    	}
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    }
+}
+
+
+
+
+//    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // "critical-threshold": 90,
+        // "format-critical": "{temperatureC}°C {icon}",
+        // "format": "{temperatureC}°C {icon}",
+        // "format-icons": ["", "", ""]
+//    },
+//    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+//        "format-wifi": "{essid} ({signalStrength}%) ",
+//        "format-ethernet": "{ipaddr}/{cidr} ",
+//        "tooltip-format": "{ifname} via {gwaddr} ",
+//        "format-linked": "{ifname} (No IP) ",
+//        "format-disconnected": "Disconnected ⚠",
+//        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+//    },
+
+//    "cpu": {
+//        "format": "{usage}% ",
+//        "tooltip": false
+//    },
+//    "memory": {
+//        "format": "{}% "
+//    },
+
