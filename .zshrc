@@ -4,6 +4,8 @@ export ZSH="$HOME/.oh-my-zsh" # Path to Oh My Zsh installation.
 export STARSHIP_CONFIG=~/.config/starship/gruvbox-rainbow.toml 
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
+#ZSH_CUSTOM="$HOME/.config/zsh/" # Overwrite PATH to Custom Directory 
+
 plugins=(git archlinux colored-man-pages emoji starship) # Example format: plugins=(rails git textmate ruby lighthouse)
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -23,3 +25,10 @@ export EDITOR='nvim'
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# custom rules
+
+export TERMINAL=kitty
+#export TERMINAL=alacritty
+#export TERMINAL=foot
+alias ff='kitty -c "$HOME/.config/kitty/ff.conf" -T Fastfetch "$HOME/.config/myScripts/ff/ff.sh" & disown'
