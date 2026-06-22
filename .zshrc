@@ -14,6 +14,7 @@ source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
+export TERMINAL=kitty
 
 # DISABLED BY STARSHIP: ZSH_THEME="robbyrussell" 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -27,8 +28,4 @@ export EDITOR='nvim'
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # custom rules
-
-export TERMINAL=kitty
-#export TERMINAL=alacritty
-#export TERMINAL=foot
 alias ff='kitty -c "$HOME/.config/kitty/ff.conf" -T Fastfetch "$HOME/.config/myScripts/ff/ff.sh" & disown'
