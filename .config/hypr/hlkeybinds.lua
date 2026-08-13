@@ -32,9 +32,6 @@ hl.bind(mainMod .. " + A",				-- Testing out Fuzzel -- good but minimal.
 hl.bind(mainMod .. " + grave", 			-- System Resources
 	hl.dsp.exec_cmd("pkill btop || " .. _C.terminal .. "-T SysResources btop"))
 
-hl.bind(mainMod .. " + SHIFT + grave",
-	hl.dsp.exec_cmd('kill $(cat $HOME/.config/myScripts/ff/pid) || ' .. _C.terminal .. '-c "$HOME/.config/kitty/ff.conf" -T Fastfetch "$HOME/.config/myScripts/ff/ff.sh"'))          -- Fastfetch Window
-
 hl.bind(mainMod .. " + N", 			-- Opens Nvim at the hypr dotfiles
 	hl.dsp.exec_cmd(_C.terminal .. '--working-directory $HOME/.config/hypr ' .. _C.editor .. '$HOME/.config/hypr',
 	{ float = true }))
