@@ -17,7 +17,7 @@ export TERMINAL=kitty
 #########
 ## ETC ##
 #########
-alias ff='kitty -c "$HOME/.config/kitty/ff.conf" -T Fastfetch "$HOME/.config/myScripts/ff/ff.sh" & disown'
+alias z='yazi' ## Professional Alias
 
 ## Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
