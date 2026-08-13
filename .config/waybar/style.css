@@ -91,20 +91,6 @@ window#waybar.empty #window {
     border: 3px ridge grey;
     padding: 2px 8px 0 8px;
 }
-#custom-ff {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-#custom-ff:hover {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-#custom-zenSearch {
-    padding: 0 10px 0 10px;
-    margin-right: 16px;
-    background-color: rgba(90, 80, 85, 0.5);
-    font-size: 18px;
-}
 #custom-hyprpicker {
     background-color: rgba(255, 182, 193, 0.75);
 }

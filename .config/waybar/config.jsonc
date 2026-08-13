@@ -1,5 +1,6 @@
 // -*- mode: jsonc -*-
 {
+    "position": "top",
     "height": 34,
     "spacing": 0, // Gaps between modules (4px)
 
@@ -22,8 +23,7 @@
 
     "group/right": {
 	"orientation": "horizontal",
-	"modules" : [	
-		"custom/zenSearch",	
+	"modules" : [
 		"tray",
 		"custom/hyprpicker",
 		"custom/media",
