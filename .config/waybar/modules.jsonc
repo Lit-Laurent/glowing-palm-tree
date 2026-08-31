@@ -18,7 +18,8 @@
 
 // Center
 "clock": {
-	"tooltip-format": "{:%m-%d-%Y}"
+	"tooltip-format": "{:%m-%d-%Y}",
+	"on-click": "pkill gnome-calendar || gnome-calendar"
 },
 
 "gamemode": {

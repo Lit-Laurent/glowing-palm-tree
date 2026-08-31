@@ -1,16 +1,12 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-
--- Example window rules that are useful
-
 local suppressMaximizeRule = hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.
     name  = "suppress-maximize-events",
     match = { class = ".*" },
 
     suppress_event = "maximize",
-})
--- suppressMaximizeRule:set_enabled(false)
+}) -- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
     -- Fix some dragging issues with XWayland
@@ -26,6 +22,7 @@ hl.window_rule({
 
     no_focus = true,
 })
+
 -----SMART GAPS -------
 hl.workspace_rule({ workspace = "w[tv1]s[false]", gaps_out = 0, gaps_in = 0 })
 hl.workspace_rule({ workspace = "f[1]s[false]", gaps_out = 0, gaps_in = 0 })
@@ -54,26 +51,28 @@ hl.window_rule({
 -----------------
 --- MY EDITS ----
 -----------------
-hl.window_rule({ -- Runnin' B-Top showing everything
+hl.window_rule({ -- Btop when opened using the toggle bind
     name = "SysResources - popup",
-    match = {title = "SysResources"},	
-    
-    size = {"monitor_w * .9", "monitor_h * .9"},
+    match = {title = "SysResources"},
+
+    size = {"monitor_w * 0.9", "monitor_h * 0.9"},
     min_size = {904,555},
     float = true,
 })
+
 hl.window_rule({ -- Fastfetch rules for fastfetch alias
-    name = "Fastfetch window rules",
+    name = "Fastfetch popup",
     match = {title= "Fastfetch"},
 
     size = {1000,820},
     min_size = {1000,820},
     float = true
 })
-hl.window_rule({
-    name = "zenSearch window rules",
-    match = {title = "zenSearch"},
 
-    size = {"monitor_w *.8", 200},
+hl.window_rule({
+    name = "Calendar dropdown",
+    match = {title = "Calendar"},
+
+    size = {"monitor_w * 0.8", "monitor_h * 0.8"},
     float = true
 })
