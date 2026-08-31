@@ -10,7 +10,7 @@ Audio: pipewire + playerctl + pavucontrol-qt (pipewire-pulse)
 Terminal: kitty\
 Shell: zsh\
 AUR Helper: paru\
-File Manager: yazi\
+File Manager: yazi
 
 ### Env
 Lockscreen: sddm\
